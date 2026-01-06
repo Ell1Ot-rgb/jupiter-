@@ -1,0 +1,59 @@
+{
+  "calibration_parameters": {
+    "scale": -0.38,
+    "offset": 0.42,
+    "AUC": 0.841634,
+    "method": "Platt Scaling",
+    "validation_samples": 2000
+  },
+  "onnx_models": {
+    "best_omega21": {
+      "name": "best_omega21.onnx",
+      "source": "calibracion/models/best_omega21.onnx (HIPERGRAFO)",
+      "description": "Fully calibrated Omega21 model - RECOMMENDED for production",
+      "status": "Production Ready",
+      "AUC_score": 0.841634,
+      "calibration_applied": true,
+      "layers": 5,
+      "atomic_units": 25
+    },
+    "omega21_brain": {
+      "name": "omega21_brain.onnx",
+      "source": "omega21_brain.onnx (HIPERGRAFO root)",
+      "description": "Omega21 brain model with atomic processing - FOR RESEARCH",
+      "status": "Research/Development",
+      "layers": 5,
+      "atomic_units": 25
+    }
+  },
+  "layer_specifications": {
+    "capa_1": {
+      "name": "Sensorial",
+      "description": "Input processing with 25 atomic units",
+      "atomic_units": 25
+    },
+    "capa_2": {
+      "name": "Dual (Temporal + Espacial)",
+      "description": "Temporal and spatial context processing"
+    },
+    "capa_3": {
+      "name": "Asociativa Inferior",
+      "description": "Lower-level pattern associations"
+    },
+    "capa_4": {
+      "name": "Asociativa Superior",
+      "description": "Higher-order concept formation"
+    },
+    "capa_5": {
+      "name": "Ejecutiva",
+      "description": "Executive decision making and output generation"
+    }
+  },
+  "metadata": {
+    "created_date": "2026-01-06",
+    "source_repository": "Ell1Ot-rgb/HIPERGRAFO",
+    "target_repository": "Ell1Ot-rgb/jupiter-",
+    "migration_status": "IN_PROGRESS",
+    "version": "1.0.0"
+  }
+}
